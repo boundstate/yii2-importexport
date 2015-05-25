@@ -1,0 +1,21 @@
+{
+    "name": "boundstate/yii2-importexport",
+    "description": "Extension for the Yii2 framework for importing and exporting data",
+    "type": "yii2-extension",
+    "keywords": ["yii2","excel","xls","xlsx","csv","phpoffice","phpexcel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bound State Software",
+            "email": "info@boundstatesoftware.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpexcel": "~1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "boundstate\\importexport\\": ""
+        }
+    }
+}

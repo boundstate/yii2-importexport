@@ -22,15 +22,9 @@ class ExcelWriter extends BaseWriter
         $xl = new PHPExcel();
         $sheet = $xl->getSheet(0);
 
-        // Sheet headers
-        foreach ($exporter->getExportHeaders() as $colNum => $header) {
-            $sheet->setCellValueByColumnAndRow($colNum, 1, $header);
-        }
-
-        // Sheet rows
         foreach ($exporter->export() as $rowNum => $row) {
             foreach ($row as $colNum => $value) {
-                $sheet->setCellValueByColumnAndRow($colNum, $rowNum + 2, $value);
+                $sheet->setCellValueByColumnAndRow($colNum, $rowNum + 1, $value);
             }
         }
 
